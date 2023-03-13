@@ -1,0 +1,499 @@
+@import "./settings";
+
+// Main
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font1, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 100vw;
+  // overflow-x: hidden;
+}
+
+p {
+  font-size: 1.4em;
+  font-family: Raleway;
+}
+
+li {
+  font-family: Secular One;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+  &:hover {
+    color: darken($black, 6%);
+  }
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+textarea:focus,
+input:focus,
+input[type]:focus,
+.uneditable-input:focus {
+  border-color: $secondary;
+  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px $secondary;
+  outline: 0 none;
+}
+
+hr {
+  border-top: 1px solid $primary;
+  margin: $l-size auto;
+  left: 0;
+  width: 100%;
+}
+
+// Bootstrap Customization
+
+// Buttons
+.btn {
+  border: none;
+  border-radius: 6px;
+  font-family: Secular One;
+  transition: all 0.15s ease-in-out;
+  padding: 1rem 2rem;
+
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+}
+
+.btn-info {
+  color: white;
+  background-color: $primary !important;
+  &:hover,
+  &:active,
+  &:visited,
+  &:link,
+  &:disabled,
+  &:focus {
+    background-color: darken($primary, 6%) !important;
+  }
+}
+
+.btn-primary {
+  background-color: $secondary;
+  color: $white;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+
+  font-family: $font1, sans-serif;
+  letter-spacing: 0em;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  transition: all 0.15s ease-in-out;
+  &:hover {
+    transform: translateY(-3px);
+  }
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited,
+  &:link,
+  &:disabled {
+    background-color: darken($secondary, 6%);
+    text-decoration: underline;
+  }
+}
+
+.btn-action {
+  margin: auto;
+  @extend .btn-primary;
+  &:hover {
+    background-color: darken($secondary, 5%);
+    color: white;
+    transform: translateY(-3px);
+  }
+}
+
+.btn-light {
+  background-color: $white;
+  color: $black;
+  text-transform: uppercase;
+  font-family: $font2, sans-serif;
+  letter-spacing: 0em;
+  line-height: 1.9rem;
+  transition: all 0.15s ease-in-out;
+  &:hover {
+    transform: translateY(-3px);
+  }
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited,
+  &:link,
+  &:disabled {
+    background-color: $primary;
+    text-decoration: underline;
+    color: white;
+  }
+}
+
+.btn-book-now {
+  @extend .btn-primary;
+  // padding: 0.4rem $m-size;
+  padding: 0.2rem 1rem;
+  font-size: 1.2rem;
+  border: 2px solid $primary;
+  background-color: white;
+  color: $black;
+  &:hover,
+  &:active,
+  &:visited,
+  &:link,
+  &:disabled,
+  &:focus {
+    background-color: darken($primary, 6%) !important;
+    color: white;
+  }
+}
+
+.btn-book-now-pink {
+  @extend .btn-book-now;
+  background-color: $pink;
+  border: 2px solid $pink;
+  border-radius: 20px;
+  color: $white;
+
+  &:hover,
+  &:active,
+  &:visited,
+  &:link,
+  &:disabled,
+  &:focus {
+    background-color: lighten($pink, 6%) !important;
+    // border: 2px solid lighten($pink, 16%);
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.btn-book-now-pink2 {
+  @extend .btn-primary;
+  background-color: $pink;
+
+  &:hover,
+  &:active,
+  &:visited,
+  &:link,
+  &:disabled,
+  &:focus {
+    background-color: lighten($pink, 6%) !important;
+    // border: 2px solid lighten($pink, 16%);
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #2d3388;
+  background-color: #fafafa;
+}
+
+.nav-link {
+  background-color: #f8f8f8;
+  color: #707070;
+  &:hover {
+    color: darken(#707070, 6%);
+  }
+}
+
+// .btn-book-now-dark {
+//   @extend .btn-book-now;
+//   background-color: lighten(#74b9ff, 19%);
+//   border: 2px solid lighten(#74b9ff, 19%);
+//   color: black;
+
+//   &:hover,
+//   &:active,
+//   &:visited,
+//   &:link,
+//   &:disabled,
+//   &:focus {
+//     background-color: lighten(#74b9ff, 16%) !important;
+//     border: 2px solid lighten(#74b9ff, 16%);
+//     color: black;
+//   }
+// }
+
+.btn-secondary {
+  background-color: $primary;
+  color: $white;
+  padding: 2rem 3rem;
+  font-weight: 400;
+  font-family: Arial, sans-serif;
+  letter-spacing: 0em;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited,
+  &:link,
+  &:disabled {
+    background-color: darken($primary, 5%);
+    text-decoration: underline;
+  }
+}
+
+.btn-tertiary {
+  color: black;
+  padding: 1rem 2rem;
+  font-family: $font1, sans-serif;
+  border: 2px solid $primary;
+  font-size: 1.4rem;
+  &:hover {
+    border: 1px solid $secondary;
+    color: white !important;
+    background-color: darken($pink, 5%) !important;
+    border: 2px solid darken($pink, 5%);
+  }
+}
+
+.btn-tertiary-white {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  font-weight: 600;
+  border-radius: 16px;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited,
+  &:link,
+  &:disabled {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+.btn-tertiary-blue {
+  padding: 1rem 2rem;
+  border-radius: 0;
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited,
+  &:link,
+  &:disabled {
+    color: white;
+    background-color: $primary;
+    text-decoration: underline;
+  }
+}
+
+.btn-purple {
+  background-color: $purple2;
+  color: $white;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  border-radius: 0;
+  font-family: $font1, sans-serif;
+  letter-spacing: 0em;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited,
+  &:link,
+  &:disabled {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+.btn-success {
+  background-color: $green;
+  border: none;
+  padding: $s-size $m-size;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited,
+  &:link,
+  &:disabled {
+    background-color: darken($green, 6%);
+  }
+}
+
+.btn-info {
+  background-color: rgb(180, 223, 249);
+  outline: darken(rgb(180, 223, 249), 6%);
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited,
+  &:link,
+  &:disabled {
+    background-color: darken(rgb(180, 223, 249), 6%);
+  }
+}
+
+.btn-light {
+  padding: $s-size $m-size;
+  font-weight: 600;
+  border-radius: 16px;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  background-color: whitesmoke;
+  @include box-shadow-bottom;
+  color: $black;
+  svg {
+    opacity: 0.6;
+  }
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited,
+  &:link,
+  &:disabled {
+    color: $primary;
+    text-decoration: underline;
+    background-color: #f8f8f8 !important;
+  }
+}
+
+.btn-big {
+  @extend .btn-primary;
+  &:hover {
+    background-color: darken($secondary, 6%);
+    color: white;
+  }
+}
+
+// Overrides react-bootstrap cards!!
+.card {
+  overflow: hidden;
+}
+.card-body {
+  background-color: white;
+  z-index: 3;
+}
+.card-img {
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+// Overrides react-bootstrap Accordion
+
+.accordion-button {
+  font-size: 1.9rem;
+  line-height: 3rem;
+  padding: $m-size $s-size;
+}
+.accordion-body {
+  font-size: 1.4rem;
+  font-family: Raleway, sans-serif;
+  padding: $xl-size $s-size;
+}
+
+// Dropdown menu
+
+.dropdown-menu {
+  transform: translateY(50px);
+  background-color: $blue;
+  border: none;
+
+  a {
+    text-transform: capitalize;
+    color: white !important;
+    font-family: $font5;
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding: $s-size $xl-size !important;
+
+    &:hover {
+      background-color: $pink !important;
+      color: white !important;
+    }
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.dropdown-menu.show {
+  display: grid;
+}
+
+.providers-menu.show {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: $xs-size !important;
+}
+
+#dropdown-split-basic {
+  &:hover {
+    color: white !important;
+  }
+}
+
+.green {
+  color: $green !important;
+}
+
+// Nav
+.nav-pills {
+  cursor: pointer;
+}
+
+.nav-link {
+  font-weight: bold;
+  &:hover {
+    background-color: #fafafa !important;
+  }
+}
+
+.modal.show .modal-dialog {
+  width: 100%;
+}
+
+.spinner {
+  animation: rotate 3s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// React Responsive Carousel
+.carousel .control-next.control-arrow:before {
+  border-left: 8px solid $secondary;
+}
+
+.carousel .control-prev.control-arrow:before {
+  border-right: 8px solid $secondary;
+}
+
+.carousel .control-dots .dot {
+  background: $secondary;
+}
