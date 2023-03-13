@@ -24,8 +24,9 @@ To run this project, you need to have [Node.js](https://nodejs.org/) installed o
 ### Installing
 
 After cloning the repository or creating a new site with this template, you need to install the dependencies by running the following command in the project directory:
-
+```shell
 npm install
+```
 
 
 
@@ -33,7 +34,9 @@ npm install
 
 To start the development server, run the following command:
 
+```shell
 npm start
+```
 
 
 
@@ -45,17 +48,22 @@ The site should now be available at `http://localhost:8000/`.
 
 To build the production-ready code, run:
 
+```shell
 npm run build
+```
 
 
 
 To serve the production-ready code locally, run:
 
+```shell
 npm run serve
 
+```
 
 
 To clean the cache and public directories, run:
+
 ```shell
 npm run clean
 ```
@@ -91,7 +99,7 @@ To use the environment variables in the configuration file, we use the `dotenv` 
 
 
 ## Dependencies
-
+```shell
 - "@contentful/rich-text-react-renderer": "^15.16.2"
 - "gatsby": "^5.7.0"
 - "gatsby-plugin-facebook-pixel": "^1.0.8"
@@ -112,13 +120,16 @@ To use the environment variables in the configuration file, we use the `dotenv` 
 - "react-dom": "^18.2.0"
 - "react-helmet": "^6.1.0"
 - "sass": "^1.59.2"
+```
 
 ## Dev Dependencies
 
+```shell
 - "autoprefixer": "^10.4.13"
 - "gatsby-plugin-postcss": "^6.7.0"
 - "postcss": "^8.4.21"
 - "tailwindcss": "^3.2.7"
+```
 
 ## License
 
