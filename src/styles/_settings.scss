@@ -1,42 +1,7 @@
 // Colors
-
 $white: #ffffff;
 $black: #343a40;
 $grey: #989898;
-
-$light-grey: #e5e5e5;
-
-$primary: rgb(2, 155, 172);
-$secondary: #d58957;
-$light-orange: #ffbe76;
-
-$pink: #d15981;
-$blue: #23395b;
-$light-blue: #8ea8c3;
-$light-blue2: #f0f9ff;
-$dark-blue: #161925;
-$yellow: #e5ba58;
-$green: #27ae60;
-$light-green: #6ab04c;
-
-$purple: #6e3bbb;
-$purple2: #8a4aea;
-$blue: #445b82;
-
-$blue-new: #252f86;
-// Fonts
-$font1: "Secular One", sans-serif;
-$font2: "Raleway";
-$font3: "Roboto Slab";
-$font4: "Boogaloo";
-$font5: "Montserrat", sans-serif;
-$font6: "Kumbh Sans", sans-serif;
-$font7: "Riffic", sans-serif;
-
-@font-face {
-  font-family: "Riffic";
-  src: url(/fonts/Riffic.ttf);
-}
 
 // Quick Font Sizes
 $font-size-xxl: 5rem;
@@ -66,7 +31,7 @@ $maxWidth: 80%;
 $navbarHeight: 215px;
 $footerHeight: 122px;
 
-@mixin box-shadow1 {
+@mixin box-shadow {
   -webkit-box-shadow: 0px 3px 6px #00000029;
   -moz-box-shadow: 0px 3px 6px #00000029;
   box-shadow: 0px 3px 6px #00000029;
@@ -76,46 +41,4 @@ $footerHeight: 122px;
   -webkit-box-shadow: 0px -3px 36px #afafaf29;
   -moz-box-shadow: 0px -3px 36px #afafaf29;
   box-shadow: 0px -3px 36px #afafaf29;
-}
-
-@mixin box-shadow-bottom {
-  -webkit-box-shadow: 0px 6px 12px #3b3b3b0c;
-  -moz-box-shadow: 0px 6px 12px #3b3b3b0c;
-  box-shadow: 0px 6px 12px #3b3b3b0c;
-}
-
-@mixin containerStyles {
-  min-height: calc(100vh - #{$navbarHeight} - #{$footerHeight});
-
-  @media screen and (min-width: 1365px) {
-    min-height: calc(100vh - #{$navbarHeight} - #{$footerHeight});
-  }
-}
-
-@mixin grey-background-section {
-  background-color: $light-blue2;
-  padding: #{$s-size} 0;
-
-  @media screen and (min-width: $mobile-breakpoint) {
-    padding: #{$m-size} 0;
-  }
-}
-
-@mixin box-shadow {
-  -webkit-box-shadow: 0px 3px 10px #00000029, -2px -3px 1px $white;
-  -moz-box-shadow: 0px 3px 10px #00000029, -2px -3px 1px $white;
-  box-shadow: 0px 3px 10px #00000029, -2px -3px 1px $white;
-}
-
-@mixin title {
-  font-family: $font1;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: rgb(44, 124, 183);
-}
-tle {
-  font-family: $font1;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: rgb(44, 124, 183);
 }
