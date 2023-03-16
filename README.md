@@ -2,7 +2,8 @@
 
 nugo-starter is a starter template for [Gatsby](https://www.gatsbyjs.com/) that includes the following features:
 
-- Basic layout and styling with [SCSS](https://sass-lang.com/)
+- [Tailwind CSS](https://tailwindcss.com/) for utility-first CSS classes
+- [SCSS](https://sass-lang.com/) & [SCSS modules](https://github.com/css-modules/css-modules) for advanced styling options
 - [React Helmet](https://github.com/nfl/react-helmet) for managing the document head
 - [gatsby-plugin-image](https://www.gatsbyjs.com/plugins/gatsby-plugin-image/) for optimizing images
 - [gatsby-plugin-sitemap](https://www.gatsbyjs.com/plugins/gatsby-plugin-sitemap/) for generating a sitemap
@@ -72,7 +73,7 @@ npm run clean
 
 ### Deployment
 
-To deploy the site, you can follow the [Gatsby deployment documentation](https://www.gatsbyjs.com/docs/deploying-and-hosting/).
+To deploy the site, you can follow the [Netlify deployment documentation](https://www.netlify.com/with/gatsby/).
 
 ## Configuration
 
@@ -101,6 +102,8 @@ To use the environment variables in the configuration file, we use the `dotenv` 
 ## Dependencies
 ```shell
 - "@contentful/rich-text-react-renderer": "^15.16.2"
+- "@mui/icons-material": "^5.11.11"
+- "@mui/material": "^5.11.12"
 - "gatsby": "^5.7.0"
 - "gatsby-plugin-facebook-pixel": "^1.0.8"
 - "gatsby-plugin-google-tagmanager": "^5.7.0"
@@ -137,4 +140,4 @@ This project is licensed under the 0BSD License. For more information, see the L
 
 ## Bugs
 
-If you find any bugs, please report them at the [issues page](https://github.com/gatsbyjs/gatsby/issues).
+If you find any bugs, please report them at the [issues page](https://github.com/Nugo-Tech/gatsby-contentful-starter/issues).
